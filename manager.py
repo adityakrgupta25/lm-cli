@@ -35,7 +35,7 @@ def add_topic(username, topic_name):
     if user.role != Roles.admin:
         raise Exception("Forbidden to create a new topic")
 
-    topic = Topics.Get(topic_name, None)
+    topic = Topics.get(topic_name, None)
     if topic is not None:
         raise Exception("Topic already exists")
 
